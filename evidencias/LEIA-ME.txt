@@ -1,1 +1,0 @@
-Depois de publicar o site, entrar com a conta Google e gerar o desenho com o número derivado do RA, salvar o SVG baixado como exemplo.svg nesta pasta.
