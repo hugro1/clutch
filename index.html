@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Desenho Assinado</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <main class="pagina">
+    <header>
+      <p class="sobrelinha">DESENVOLVIMENTO WEB PRÁTICO</p>
+      <h1>Desenho Assinado</h1>
+      <p class="introducao">Gere uma figura matemática assinada pelo e-mail verificado da sua conta Google.</p>
+    </header>
+    <section class="painel" aria-labelledby="login-titulo">
+      <h2 id="login-titulo">1. Entre com o Google</h2>
+      <p>O e-mail não é digitado no formulário: ele vem do token verificado pelo servidor.</p>
+      <div id="google-button"></div>
+      <p id="login-status" class="status" aria-live="polite">Faça login para gerar o desenho.</p>
+    </section>
+    <section class="painel" aria-labelledby="desenho-titulo">
+      <h2 id="desenho-titulo">2. Gere seu desenho</h2>
+      <form id="formulario" novalidate>
+        <label for="numero">Número inteiro de 1 a 100</label>
+        <input id="numero" name="numero" type="number" min="1" max="100" step="1" required placeholder="42">
+        <button type="submit" id="gerar" disabled>Gerar desenho</button>
+      </form>
+      <p id="mensagem" class="mensagem" role="alert" aria-live="polite"></p>
+      <figure id="desenho" aria-live="polite"></figure>
+      <button id="baixar" type="button" hidden>Baixar SVG</button>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
