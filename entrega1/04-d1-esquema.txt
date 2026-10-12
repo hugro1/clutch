@@ -1,4 +1,0 @@
-oauth_transactions | table
-oauth_transactions_expiry | index
-sessions | table
-sessions_expiry | index
